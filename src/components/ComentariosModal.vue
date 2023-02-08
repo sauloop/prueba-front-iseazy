@@ -11,6 +11,10 @@
         <div
           class="m-20 w-full overflow-y-auto rounded-md bg-white text-gray-900 scrollbar-none"
         >
+          <div class="relative">
+            <div class="absolute top-10 right-10"><slot></slot></div>
+          </div>
+
           <div class="flex justify-center p-10 text-lg">
             <h2>Comentarios</h2>
           </div>
@@ -19,7 +23,7 @@
             <ul>
               <li v-for="comentario in comentariosStore.comentarios">
                 <Mensaje
-                  v-if="comentario.tipo === 'mensaje'"
+                  v-if="comentario.elemento === 'mensaje'"
                   :mensaje="comentario"
                 />
                 <Entrega v-else :entrega="comentario" />
@@ -35,12 +39,8 @@
             />
 
             <button type="button" class="btn btn-primary" @click="nuevoMensaje">
-              Enviar
+              <font-awesome-icon icon="fa-solid fa-paper-plane" />
             </button>
-          </div>
-
-          <div class="flex justify-center p-10">
-            <slot></slot>
           </div>
         </div>
       </div>

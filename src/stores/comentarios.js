@@ -4,7 +4,7 @@ const fechaEntrega = new Date();
 
 const comentariosData = [
   {
-    tipo: "entrega",
+    elemento: "entrega",
     numVersion: 1,
     nombre: "Ejercicio1.pdf",
     tipo: "Documento / PDF (1.7 MB)",
@@ -12,7 +12,7 @@ const comentariosData = [
     url: "test",
   },
   {
-    tipo: "mensaje",
+    elemento: "mensaje",
     id: 1,
     texto: "Msg A",
   },
@@ -26,7 +26,7 @@ export const useComentariosStore = defineStore("comentarios", {
   actions: {
     nuevoMensaje(mensaje) {
       this.comentarios.push({
-        tipo: "mensaje",
+        elemento: "mensaje",
         id: this.idMensaje + 1,
         texto: mensaje,
       });

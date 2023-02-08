@@ -9,13 +9,19 @@
     </div>
 
     <ComentariosModal :show="showModal">
-      <button
+      <!-- <button
         type="button"
         class="btn btn-primary mt-4"
         @click="showModal = false"
       >
         Cerrar
-      </button>
+      </button> -->
+
+      <font-awesome-icon
+        icon="fa-solid fa-xmark"
+        class="cursor-pointer text-3xl text-blue-500"
+        @click="showModal = false"
+      />
     </ComentariosModal>
   </div>
 </template>
