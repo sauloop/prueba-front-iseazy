@@ -8,9 +8,10 @@ import {
   faCloudArrowDown,
   faPaperPlane,
   faXmark,
+  faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faXmark, faCloudArrowDown, faPaperPlane);
+library.add(faXmark, faCloudArrowDown, faPaperPlane, faCircleXmark);
 
 const pinia = createPinia();
 

@@ -1,27 +1,29 @@
 <template>
   <div class="mx-auto max-w-4xl">
-    <h1 class="p-10 text-center">Prueba desarrollo front-end isEazy</h1>
+    <h1 class="p-20 text-center">Prueba desarrollo front-end isEazy</h1>
 
-    <div class="flex justify-center p-10">
+    <div class="flex justify-center">
       <button type="button" class="btn btn-primary" @click="showModal = true">
         Comentarios
       </button>
     </div>
 
     <ComentariosModal :show="showModal">
-      <!-- <button
-        type="button"
-        class="btn btn-primary mt-4"
-        @click="showModal = false"
-      >
-        Cerrar
-      </button> -->
+      <template v-slot:cerrarA>
+        <font-awesome-icon
+          icon="fa-solid fa-xmark"
+          class="cursor-pointer text-3xl text-sky-500"
+          @click="showModal = false"
+        />
+      </template>
 
-      <font-awesome-icon
-        icon="fa-solid fa-xmark"
-        class="cursor-pointer text-3xl text-blue-500"
-        @click="showModal = false"
-      />
+      <template v-slot:cerrarB>
+        <font-awesome-icon
+          icon="fa-solid fa-circle-xmark"
+          @click="showModal = false"
+          class="text-4xl text-gray-700 hover:opacity-80"
+        />
+      </template>
     </ComentariosModal>
   </div>
 </template>

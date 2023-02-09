@@ -1,9 +1,11 @@
 import { defineStore } from "pinia";
 
-const fechaEntrega = new Date();
+const fechaEntrega = new Date("2-7-2023");
+const fechaEntregaB = new Date("2-9-2023");
 
 const comentariosData = [
   {
+    id: 1,
     elemento: "entrega",
     numVersion: 1,
     nombre: "Ejercicio1.pdf",
@@ -12,26 +14,55 @@ const comentariosData = [
     url: "test",
   },
   {
+    id: 2,
     elemento: "mensaje",
-    id: 1,
-    texto: "Msg A",
+    texto: "Mensaje A.",
+    fecha: fechaEntrega.toLocaleDateString("es-ES"),
+  },
+  {
+    id: 3,
+    elemento: "mensaje-respuesta",
+    texto: "Mensaje B.",
+    fecha: fechaEntrega.toLocaleDateString("es-ES"),
+  },
+  {
+    id: 4,
+    elemento: "entrega",
+    numVersion: 2,
+    nombre: "Ejercicio1.pdf",
+    tipo: "Documento / PDF (2.7 MB)",
+    fecha: fechaEntregaB.toLocaleDateString("es-ES"),
+    url: "test",
+  },
+  {
+    id: 5,
+    elemento: "mensaje",
+    texto: "Mensaje C.",
+    fecha: fechaEntregaB.toLocaleDateString("es-ES"),
+  },
+  {
+    id: 6,
+    elemento: "mensaje-respuesta",
+    texto: "Mensaje D.",
+    fecha: fechaEntregaB.toLocaleDateString("es-ES"),
   },
 ];
 
 export const useComentariosStore = defineStore("comentarios", {
   state: () => ({
     comentarios: comentariosData,
-    idMensaje: 1,
+    idComentario: 6,
   }),
   actions: {
     nuevoMensaje(mensaje) {
       this.comentarios.push({
         elemento: "mensaje",
-        id: this.idMensaje + 1,
+        id: this.idComentario + 1,
         texto: mensaje,
+        fecha: new Date().toLocaleDateString("es-ES"),
       });
 
-      this.idMensaje++;
+      this.idComentario++;
     },
   },
 });
