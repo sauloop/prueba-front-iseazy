@@ -35,10 +35,7 @@
                 "
                 :mensaje="comentario"
               />
-              <!-- <Mensaje
-                v-if="comentario.elemento === 'mensaje-respuesta'"
-                :mensaje="comentario"
-              /> -->
+
               <Entrega v-else :entrega="comentario" />
             </template>
           </div>
