@@ -29,17 +29,17 @@
               :key="comentario.id"
             >
               <Mensaje
-                v-if="comentario.elemento === 'mensaje'"
+                v-if="
+                  comentario.elemento === 'mensaje' ||
+                  comentario.elemento === 'mensaje-respuesta'
+                "
                 :mensaje="comentario"
               />
-              <Mensaje
+              <!-- <Mensaje
                 v-if="comentario.elemento === 'mensaje-respuesta'"
                 :mensaje="comentario"
-              />
-              <Entrega
-                v-if="comentario.elemento === 'entrega'"
-                :entrega="comentario"
-              />
+              /> -->
+              <Entrega v-else :entrega="comentario" />
             </template>
           </div>
 

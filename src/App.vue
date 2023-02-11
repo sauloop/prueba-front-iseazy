@@ -12,7 +12,7 @@
       <template v-slot:cerrarA>
         <font-awesome-icon
           icon="fa-solid fa-xmark"
-          class="cursor-pointer text-3xl text-sky-500"
+          class="cursor-pointer text-3xl text-sky-500 hover:opacity-80"
           @click="showModal = false"
         />
       </template>

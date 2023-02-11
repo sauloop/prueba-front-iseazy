@@ -28,7 +28,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block rounded-full px-6 py-2.5 text-base font-bold text-white shadow-md focus:bg-blue-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg;
+    @apply inline-block rounded-full px-6 py-2.5 text-base font-bold text-white shadow-md;
   }
 
   .btn:hover {
