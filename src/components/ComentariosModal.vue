@@ -9,19 +9,19 @@
       <!-- Contenido -->
       <div class="fixed inset-0 flex h-auto">
         <div
-          class="mx-20 my-10 w-full overflow-y-auto rounded-md bg-white scrollbar-none"
+          class="mx-4 my-10 w-full overflow-y-auto rounded-md bg-white scrollbar-none md:mx-20"
         >
           <div class="relative">
-            <div class="absolute top-10 right-10">
+            <div class="absolute top-4 right-4 md:top-10 md:right-10">
               <slot name="cerrarA"></slot>
             </div>
           </div>
 
-          <div class="mt-8 flex justify-center text-lg">
+          <div class="mt-8 flex justify-center px-4 text-lg md:px-10">
             <h3>Comentarios</h3>
           </div>
 
-          <hr class="mx-10 mt-6 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+          <hr class="mx-4 mt-6 h-px border-0 bg-gray-200 md:mx-10" />
 
           <div>
             <template
@@ -41,11 +41,11 @@
           </div>
 
           <div>
-            <form class="m-10 flex justify-between">
+            <form class="mt-8 px-4 md:flex md:justify-between md:px-10">
               <input
                 :value="mensaje"
                 @input="(event) => (mensaje = event.target.value)"
-                class="mr-8 inline-block w-full rounded-full border bg-gray-200 px-10 font-bold"
+                class="m-0 block w-full rounded-full border bg-gray-200 px-10 py-2.5 font-bold md:mr-8 md:inline-block"
               />
 
               <button
@@ -57,7 +57,7 @@
               </button>
             </form>
           </div>
-          <div class="m-10 flex justify-center">
+          <div class="my-8 flex justify-center px-4 md:px-10">
             <slot name="cerrarB"></slot>
           </div>
         </div>

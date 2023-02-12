@@ -28,7 +28,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block rounded-full px-6 py-2.5 text-base font-bold text-white shadow-md;
+    @apply mt-8 block w-full rounded-full px-6 py-2.5 text-base font-bold text-white shadow-md md:mt-0 md:inline-block md:w-auto;
   }
 
   .btn:hover {

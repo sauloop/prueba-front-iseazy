@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-10 my-0 flex justify-start bg-white py-8 text-white">
+  <div class="mx-4 my-0 flex justify-start bg-white py-8 text-white md:mx-10">
     <div class="flex w-full items-center justify-between">
       <div class="text-lg font-bold">
         <p class="text-gray-700">VERSIÓN {{ entrega.numVersion }}</p>
@@ -18,7 +18,7 @@
       />
     </div>
   </div>
-  <hr class="my-2 mx-10 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+  <hr class="mx-4 my-2 h-px border-0 bg-gray-200 md:mx-10" />
 </template>
 
 <script setup>

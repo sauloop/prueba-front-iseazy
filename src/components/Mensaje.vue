@@ -1,9 +1,10 @@
 <template>
   <div
-    class="mx-10 my-8 w-auto rounded-md px-8 py-4"
+    class="mx-4 my-8 w-auto rounded-md px-8 py-4 md:mx-10"
     :class="{
-      'ml-96 bg-sky-500 text-white': mensaje.elemento === 'mensaje',
-      'mr-96  bg-gray-200 text-black': mensaje.elemento === 'mensaje-respuesta',
+      'm-0 bg-sky-500 text-white md:ml-96': mensaje.elemento === 'mensaje',
+      'm-0 bg-gray-200  text-black md:mr-96':
+        mensaje.elemento === 'mensaje-respuesta',
     }"
   >
     <div class="flex w-full justify-start">
@@ -13,7 +14,7 @@
       </div>
     </div>
   </div>
-  <hr class="my-2 mx-10 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+  <hr class="my-2 mx-4 h-px border-0 bg-gray-200 dark:bg-gray-700 md:mx-10" />
 </template>
 
 <script setup>

@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto max-w-4xl">
-    <h1 class="p-20 text-center">Prueba desarrollo front-end isEazy</h1>
+  <div class="mx-auto w-full p-4">
+    <h1 class="p-10 text-center md:p-20">Prueba desarrollo front-end isEazy</h1>
 
     <div class="flex justify-center">
       <button type="button" class="btn btn-primary" @click="showModal = true">
